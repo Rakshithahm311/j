@@ -1,0 +1,128 @@
+*{
+    box-sizing:border-box;
+}
+
+body{
+    background-color: #34495e;
+    color:#ffe;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    height:80vh;
+    margin:0;
+    overflow:hidden;
+
+}
+
+.figure-container{
+    fill:transparent;
+    stroke:#fff;
+    stroke-width: 4px;
+    stroke-linecap: round;
+}
+
+.figure-part{
+    display: none;
+}
+
+.game-container{
+    padding:20px 30px;
+    position:relative;
+    margin:auto;
+    height: 350px;
+    width:450px;
+}
+
+.wrong-letters-container{
+    position: absolute;
+    top:20px;
+    right:20px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrong-letters-container p{
+    margin: 0 20 10 0;
+}
+
+.wrong-letters-container span{
+    font-size: 30px;
+}
+
+.word{
+    display: flex;
+    position: absolute;
+    left:50%;
+    transform: translate(-50%);
+    text-align: center;
+    
+}
+
+.letter{
+    border-bottom: 2px solid blue;
+    margin: 0 20px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    width:30px;
+}
+
+.popup-container{
+    background-color: rgba(0 , 0 , 0 , 0.3);
+    position:fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    display: none;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.popup{
+    background-color: #20B2AA;
+    border-radius: 5px;
+    box-shadow: 0 15px 3px rgba(0 , 0, 0, 0.1);
+    width:200px;
+    height:100px;
+}
+
+#play-button{
+    cursor:pointer;
+    background-color: white;
+    color:teal;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top:15px;
+    margin-bottom:2px;
+    font-size: 15px;
+}
+
+#play-button:active{
+    transform: scale(0.98);
+}
+
+#play-button:focus{
+    outline:0;
+}
+
+.notification-container{
+    background-color: #808080;
+    color:#FFF;
+    padding:10px;
+    position: fixed;
+    bottom:-100px;
+    border-radius: 5px;
+    font-size: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.notification-container.show{
+    transform: translateY(-100px);
+}
+
+
